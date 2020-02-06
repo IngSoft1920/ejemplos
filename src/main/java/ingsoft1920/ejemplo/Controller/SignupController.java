@@ -1,5 +1,6 @@
 package ingsoft1920.ejemplo.Controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -80,7 +81,10 @@ public class SignupController {
 				model.addAttribute(sesionBean);
 				
 				//Tambien puedo publicar listas, e iterar por ellas en el jsp
-				List<String> listaStrings = List.of("string1","string2","string3");
+				List<String> listaStrings = new ArrayList<String>();
+				listaStrings.add("string1");
+				listaStrings.add("string2");
+				listaStrings.add("string3");
 				model.addAttribute("listaStrings",listaStrings);
 				
 				//Devolvemos el nombre de la vista que corresponde (welcome.jsp)
